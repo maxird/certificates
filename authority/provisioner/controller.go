@@ -178,7 +178,7 @@ func DefaultAuthorizeSSHRenew(_ context.Context, p *Controller, cert *ssh.Certif
 	return nil
 }
 
-var sshUserRegex = regexp.MustCompile("^[a-z][-a-z0-9_]*$")
+var sshUserRegex = regexp.MustCompile("^[a-z0-9][-a-z0-9_]*$")
 
 // SanitizeStringSlices removes duplicated an empty strings.
 func SanitizeStringSlices(original []string) []string {
